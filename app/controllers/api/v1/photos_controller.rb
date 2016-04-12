@@ -17,7 +17,7 @@ module Api
         def success_response
           picture = Picture.limit(1).order("RANDOM()")
           render json: {
-            picture: "http://localhost:3000/uploads/pictures/#{picture.first[:filename]}"
+            picture: "http://recip.herokuapp.com/uploads/pictures/#{picture.first[:filename]}"
           }, status: 200
         end
 
