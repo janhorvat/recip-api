@@ -3,6 +3,7 @@ module Api
     class Api::V1::PhotosController < ApplicationController
 
       def upload
+        binding.pry
         return error_response("Wrong file type") unless params[:picture].content_type == "image/jpeg"
 
         @picture = Picture.new(filename: params[:picture])
