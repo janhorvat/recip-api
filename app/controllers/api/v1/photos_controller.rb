@@ -17,7 +17,7 @@ module Api
         def success_response
           picture = Picture.limit(1).order("RANDOM()")
           render json: {
-            picture: "http://recip.herokuapp.com/uploads/pictures/#{picture.first[:filename]}"
+            picture: "https://s3.eu-central-1.amazonaws.com/recip-photo/uploads/#{picture.first[:filename]}"
           }, status: 200
         end
 
