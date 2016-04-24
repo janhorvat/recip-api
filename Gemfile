@@ -15,6 +15,8 @@ gem 'responders', '~> 2.0'
 gem 'rails_12factor'
 gem "fog"
 gem 'dotenv-rails'
+gem 'mina'
+gem 'mina-extras'
 
 group :development, :test do
   gem 'byebug'
@@ -23,3 +25,6 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem "puma"
+end
